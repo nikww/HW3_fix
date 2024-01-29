@@ -17,6 +17,13 @@ namespace ConsoleApp3
             one.mid_value();
             one.more_hundred();
             one.no_repeat_elements();
+            Console.WriteLine("Введите количество элементов для нового одномерного массива:");
+            int k = int.Parse(Console.ReadLine());
+            one.recreate(k);
+            one.mid_value();
+            one.more_hundred();
+            one.no_repeat_elements();
+            Console.WriteLine();
 
             Console.WriteLine("Введите количество строк и столбцов в двумерном массиве");
             int n1 = int.Parse(Console.ReadLine());
@@ -28,6 +35,14 @@ namespace ConsoleApp3
             two.mid_value();
             two.array_output_normal();
             two.array_output_reversed();
+            Console.WriteLine("Введите количество элементов для нового двумерного массива:");
+            int k1 = int.Parse(Console.ReadLine());
+            int l1 = int.Parse(Console.ReadLine());
+            two.recreate(k1, l1);
+            two.mid_value();
+            two.array_output_normal();
+            two.array_output_reversed();
+            Console.WriteLine();
 
 
             Console.WriteLine("Введите количество строк в ступенчатом массиве:");
@@ -39,7 +54,12 @@ namespace ConsoleApp3
             step.all_mid_value();
             step.inside_mid_value();
             step.change_odd();
-
+            Console.WriteLine("Введите количество строк для нового ступенчатого массива:");
+            int u = int.Parse(Console.ReadLine());
+            step.recreate(u);
+            step.all_mid_value();
+            step.inside_mid_value();
+            step.change_odd();
 
 
 

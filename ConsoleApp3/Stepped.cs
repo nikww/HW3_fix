@@ -23,17 +23,31 @@ namespace ConsoleApp3
         {
             if (user_fill)
             {
-                FillByUser();
+                FillByUser(array_size);
             }
             else
             {
-                RndmFill();
+                RndmFill(array_size);
             }
         }
 
-        private void RndmFill()
+
+
+        public void recreate(int n)
         {
-            array= new int[array_size][];
+            if (user_fill)
+            {
+                FillByUser(n);
+            }
+            else
+            {
+                RndmFill(n);
+            }
+        }
+
+        private void RndmFill(int n)
+        {
+            array= new int[n][];
             for (int i = 0; i < array_size; i++)
             {
                 Console.WriteLine("Введите количество элементов в строке массива");
@@ -47,9 +61,9 @@ namespace ConsoleApp3
             }
         }
 
-        private void FillByUser()
+        private void FillByUser(int n)
         {
-            array = new int[array_size][];
+            array = new int[n][];
             for (int i = 0; i < array_size; i++)
             {
                 Console.WriteLine("Введите количество элементов в строке массива");

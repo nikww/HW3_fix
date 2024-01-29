@@ -20,6 +20,19 @@ namespace ConsoleApp3
             Fill();
         }
 
+        public void recreate(int a, int b)
+        {
+            if (!user_fill)
+            {
+                RndmFill(a,b);
+            }
+            else
+            {
+                FillByUser(a,b);
+            }
+
+        }
+
         private void FillByUser(int k, int l)
         {
             Console.WriteLine("Введите элементы массива:");
@@ -87,7 +100,7 @@ namespace ConsoleApp3
 
         public void array_output_reversed()
         {
-            Console.WriteLine("Массив после замены всех чётных элементов на произведених их индексов:");
+            Console.WriteLine("Массив после замены всех чётных элементов на произведения их индексов:");
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 if (i % 2 != 0)

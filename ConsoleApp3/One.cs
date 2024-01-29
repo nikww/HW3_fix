@@ -19,6 +19,20 @@ namespace ConsoleApp3
         }
         private int[] array;
 
+        public void recreate(int m)
+        {
+            if (!user_fill)
+            {
+                RndmFill(m);
+            }
+            else
+            {
+                FillByUser(m);
+            }
+
+        }
+        
+
         private void FillByUser(int m)
         {
             Console.WriteLine("Введите элементы массива:");
